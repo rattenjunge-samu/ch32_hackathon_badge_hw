@@ -9469,6 +9469,16 @@
 	)
 	(wire
 		(pts
+			(xy 236.22 110.49) (xy 236.22 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4bb2086-d5cc-4fd2-bd60-1407b06020ef")
+	)
+	(wire
+		(pts
 			(xy 127 123.19) (xy 130.81 123.19)
 		)
 		(stroke
@@ -10246,6 +10256,16 @@
 			(type default)
 		)
 		(uuid "df8cdac5-3d07-42d5-9238-3b589a235aee")
+	)
+	(wire
+		(pts
+			(xy 236.22 101.6) (xy 236.22 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dfbc3269-9e5e-4734-a2e3-330770ddf8f5")
 	)
 	(wire
 		(pts
@@ -11941,6 +11961,28 @@
 		(uuid "898f388e-3101-450d-9e65-4c5c01c77b73")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 170.3833 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "3V3"
+		(shape output)
+		(at 236.22 101.6 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "90ace67b-9f23-4941-92dc-368b39311f31")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 236.22 95.1072 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -28168,6 +28210,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 236.22 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f6766817-876f-4d06-9aa9-01321304abf7")
+		(property "Reference" "C3"
+			(at 240.03 105.4099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 240.03 107.9499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 237.1852 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 236.22 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 236.22 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "22ab51c0-110d-411d-8262-8fc33b2341d5")
+		)
+		(pin "1"
+			(uuid "42651af6-5956-4506-92a6-ac13974b7396")
+		)
+		(instances
+			(project "charlieplex_test"
+				(path "/caf1de35-ef7e-4783-9742-4ba6dbc5c008"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 207.01 82.55 90)
 		(unit 1)
@@ -28652,6 +28764,72 @@
 			(project "charlieplex_test"
 				(path "/caf1de35-ef7e-4783-9742-4ba6dbc5c008"
 					(reference "D29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 236.22 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fb5204b9-3df2-4d92-ab82-e2141992a10a")
+		(property "Reference" "#PWR010"
+			(at 236.22 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 236.22 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 236.22 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 236.22 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 236.22 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "30090edc-9147-421f-8203-554b729758e7")
+		)
+		(instances
+			(project "charlieplex_test"
+				(path "/caf1de35-ef7e-4783-9742-4ba6dbc5c008"
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
